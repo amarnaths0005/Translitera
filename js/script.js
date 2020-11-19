@@ -93,7 +93,7 @@
 
     sampleGenericPassage = " namaskAra suprabhAta shubhadina shubharaatri";
 
-    sampleGenericPassage = "vishRuta";
+    //sampleGenericPassage = "vishRuta";
 
     language = "Kannada";
 
