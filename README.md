@@ -37,7 +37,7 @@ The steps of a solution strategy are outlined below:
 
 8. The function `handlePartOfLength3` is somewhat big. First to be checked is the presence of two successive consonant characters in the Gurmukhi language. This is done using the regex `/([bcdfghjklmnpqrstvwxyz])\1+/`; this needs to be replaced with an Addak and a single consonant character. Then comes the check for Anusvaara, Visarga, Avagraha in the three character set. Then come the cases where the second character is a consonant and third character is a vowel; here again, the cases where the third character is an `a` or not. 
 
-9. Then comes the function `handlePartOfLengthGreaterThan3', which, though is a rare occurrence, needs to be handled. Here again, some special cases are handled. 
+9. Then comes the function `handlePartOfLengthGreaterThan3`, which, though is a rare occurrence, needs to be handled. Here again, some special cases are handled. 
 
 10. All of these above functions, including splitting of the original text into lines, splitting each line into words, splitting each word into parts of 1, 2, 3, or more characters each, transliterating each part, and assembling the whole text back again, are contained in a JavaScript file `script.js`.
 
