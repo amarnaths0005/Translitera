@@ -375,8 +375,8 @@
 
   // Function to handle updated part of Length 1, like "H", "a", "|"
   function handlePartOfLength1(updatedPart, isFirstPart, isLastPart, result) {
-    //("Coming here Part 1", updatedPart, isFirstPart);
-    if (updatedPart[0] == "z" && isFirstPart) {
+    //console.log("Coming here Part 1", updatedPart, isFirstPart);
+    if (updatedPart[0] == "R" && isFirstPart) {
       result += vowels.get("Ru");
     } else if (vowels.has(updatedPart[0])) {
       result += vowels.get(updatedPart[0]);
@@ -854,7 +854,7 @@
 
   function showOdiaText() {
     let passage =
-      " bande utkaLa jananee \n    chaaru haasamaYI chaaru bhaaShamaYI \n jananee jananee jananee || \n \n poota payodhi bidhauta shareeraa \n    taaLatamaaLa sushobhita teeraa \n shubhrataTineekooLa sheekara sameeraa \n    jananee jananee jananee || 1 || \n \n ghana banabhoomi raajita a~gge \n    neeLa bhoodharamaaLaa saaje tara~gge \n  kaLa kaLa mukharita caaru biha~gge \n    jananee jananee jananee || 2 || \n \n sundarashaaLi sushobhita kShEtraa \n    j~jaanabijj~jaana pradarshita netraa \n yogee ruShigaNa uTaja pabitraa \n    jananee jananee jananee || 3 || \n \n suMdara maMdira maNDita deshaa \n    chaarukaLaabaLi shobhita beshaa \n puNya teerthacaYa poorNNa pradeshaa \n    jananee jananee jananee || 4 || \n \n utkaLa surabara darpita gehaa \n    arikuLa shoNita carccita dehaa \n bishvabhoomaNDaLa kRutabara snehaa \n    jananee jananee jananee || 5 || \n \n kabikuLamauLi sunandana bandyaa \n    bhubanabighoShita keertti anindyaa \n dhanye puNye cirasharaNye \n    jananee jananee jananee || 6 ||";
+      " bande utkaLa jananee \n    chaaru haasamaYI chaaru bhaaShamaYI \n jananee jananee jananee || \n \n poota payodhi bidhauta shareeraa \n    taaLatamaaLa sushobhita teeraa \n shubhrataTineekooLa sheekara sameeraa \n    jananee jananee jananee || 1 || \n \n ghana banabhoomi raajita a~gge \n    neeLa bhoodharamaaLaa saaje tara~gge \n  kaLa kaLa mukharita caaru biha~gge \n    jananee jananee jananee || 2 || \n \n sundarashaaLi sushobhita kShEtraa \n    j~jaanabijj~jaana pradarshita netraa \n yogee RuShigaNa uTaja pabitraa \n    jananee jananee jananee || 3 || \n \n suMdara maMdira maNDita deshaa \n    chaarukaLaabaLi shobhita beshaa \n puNya teerthacaYa poorNNa pradeshaa \n    jananee jananee jananee || 4 || \n \n utkaLa surabara darpita gehaa \n    arikuLa shoNita carccita dehaa \n bishvabhoomaNDaLa kRutabara snehaa \n    jananee jananee jananee || 5 || \n \n kabikuLamauLi sunandana bandyaa \n    bhubanabighoShita keertti anindyaa \n dhanye puNye cirasharaNye \n    jananee jananee jananee || 6 ||";
 
     optionLang.value = "odia";
     language = "Odia";
