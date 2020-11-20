@@ -47,7 +47,7 @@ The steps of a solution strategy are outlined below:
 
 14. Since I am not sure of the performance of this code for large pieces of text, I have restricted the maximum number of characters in the input textarea to 4000, which I feel is sufficient for most of your work. Should you need more length, I suggest you do your work in parts, with each part within the 4000 character limit. And then join all parts in your Notepad or Word file. 
 
-##Points to Note
+## Points to Note
 - My familiarity with Indian languages is limited to only these languages - Kannada, Devanagari, and Tamil and Telugu to some extent. Since there are a large number of words in each language, I have verified each language to the extent of the sample passages of text that are provided here. There may be cases in each of the JavaScript functions that are yet to be handled, which I am currently not aware of. If you come across any text which results in a `undefined` or a `NaN` appearing on the output screen, please send me a mail with the text, along with expected output, to the email id mentioned on top of the `script.js` JavaScript file. I will make all attempts to handle it in the next version. 
 
 - Or, since this is a publicly hosted on Github, feel free to fork this repository, and extend the code on your own. 
