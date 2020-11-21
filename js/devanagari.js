@@ -20,8 +20,8 @@ function setupDevanagariMaps() {
   devanagariVowels.set("u", "\u0909");
   devanagariVowels.set("U", "\u090A");
   devanagariVowels.set("Ru", "\u090B");
-  devanagariVowels.set("e", "\u090D");
-  devanagariVowels.set("E", "\u090D");
+  devanagariVowels.set("e", "\u090F");
+  devanagariVowels.set("E", "\u090F");
   devanagariVowels.set("!", "\u0910"); // ai
   devanagariVowels.set("o", "\u0913");
   devanagariVowels.set("O", "\u0913");
