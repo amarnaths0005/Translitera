@@ -49,6 +49,65 @@ The steps of a solution strategy are outlined below:
 
 14. Since I am not sure of the performance of this code for large pieces of text, I have restricted the maximum number of characters in the input textarea to 4000, which I feel is sufficient for most of your work. Should you need more length, I suggest you do your work in parts, with each part within the 4000 character limit. And then join all parts in your Notepad or Word file. 
 
+## More on the Code
+
+1. The first thing done is the setting up of the different maps. For example, for the Kannada language, these are the maps - `kannadaVowels`, `kannadaConsonants`, `kannadaKaagunita` and `kannadaNumbers`. Similar maps are set up for the other languages also. There are these JavaScript files - `bengali.js, devanagari.js, gujarati.js, gurmukhi.js, kannada.js, malayalam.js, oriya.js, tamil.js, telugu.js`. A sample of the `kannadaVowels` map is shown here 
+
+```
+ kannadaVowels.set("a", "\u0C85");
+ kannadaVowels.set("A", "\u0C86"); // Also aa
+ kannadaVowels.set("i", "\u0C87");
+ kannadaVowels.set("I", "\u0C88"); // Also ee
+ kannadaVowels.set("u", "\u0C89");
+ kannadaVowels.set("U", "\u0C8A");
+```
+
+In addition there are certain symbols like `anusvaara`, `visarga`, `viraama`. These are also set up for each language. 
+
+2. Then, the given text is split into lines, and further, each line is split into words using the spaces between words.
+
+3. Then the regular expression `const regex27 = /[bcdfghjklmnpqrstvwxyz~&|,.?\'-]{0,}[aeiou^]{0,}/gi;` is used to split each word into its constituent parts which can be independently transliterated. This split is done in this line 
+
+```
+let splitParts = splitNos[j].match(regex27);
+```
+
+4. The function `transliterateEachPart()` is responsible for transliterating each of the parts of a word. The following extract of this function does the task of updating the result string in the chosen language.
+
+```
+    if (updatedPart.length === 1) {
+      result += handlePartOfLength1(
+        updatedPart,
+        isFirstPart,
+        isLastPart,
+        result
+      );
+    } else if (updatedPart.length === 2) {
+      result += handlePartOfLength2(updatedPart, isFirstPart, result);
+    } else if (updatedPart.length === 3) {
+      result += handlePartOfLength3(updatedPart, isFirstPart, result);
+    } else {
+      // updatedPart.length > 3
+      result += handlePartOfLengthGreaterThan3(updatedPart, result);
+    }
+```
+
+With this extract, there are four functions `handlePartOfLength1()`, `handlePartOfLength2()`, `handlePartOfLength3()`, `handlePartOfLengthGreaterThan3()`. These functions are responsible for handling parts of the lengths specified in the name of the function. The result is appended to the main transliteration result. 
+
+5. For example, in the function `handlePartOfLength1()`, the most important lines are 
+
+```
+result += vowels.get(updatedPart[0]);
+```
+and 
+```
+result += consonants.get(updatedPart[0]);
+```
+
+Special cases for some of the languages are also handled in this function. Similar are the other functions which handle parts of length 2, 3 and more than 3. 
+
+6. The entire transliteration code is in the file `script.js`. This file also contains functions which respond to button clicks on the screen, and also update the DOM with the final transliteration result. 
+
 ## Points to Note
 - My familiarity with Indian languages is limited to only these languages - Kannada, Devanagari, and Tamil and Telugu to some extent. Since there are a large number of words in each language, I have verified each language to the extent of the sample passages of text that are provided here. There may be cases in each of the JavaScript functions that are yet to be handled, which I am currently not aware of. If you come across any text which results in a `undefined` or a `NaN` appearing on the output screen, please send me a mail with the text, along with expected output, to the email id mentioned on top of the `script.js` JavaScript file. I will make all attempts to handle it in the next version. 
 
@@ -57,6 +116,8 @@ The steps of a solution strategy are outlined below:
 - I have used some special characters to replace some string patterns via regexes, and therefore you will not be able to view special characters in the output. I suggest that you take the output from here into Notepad, and then add those special characters there, and save it for further use. Use this app only for converting normal words from English text to your language.
 
 - One more thing. This software is weak in handling two successive vowels. Simply because I have still not figured out how to distinguish an independent vowel from a dependent vowel extension (Kaagunita), when two vowels come one after the other. For this, I suggest you to include a space between two successive vowels, get the transliteration done here, take this output to Notepad, and then remove the space in Notepad. This is a suggested workaround. 
+
+- There are certain words like `nirRuti` which do not get transliterated properly. If you find more such words, please send me those words, and I will think of a possible resolution. 
 
 - In summary, this is not necessarily a perfect piece of code, and is subject to modifications in future. For all the sample text passages provided, I hope and feel that the output is acceptable. 
 
