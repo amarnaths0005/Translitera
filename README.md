@@ -9,6 +9,8 @@ There are 22 official languages in India, and a number of them have been specifi
 
 There are several transliteration tools for converting from English text to Indian languages. However, I have found that some of them are platform specific, working only on Windows, or on Linux systems. Have not come across a browser based solution, which can hopefully work equally on all platforms - Windows, Mac and Linux. This is an attempt towards such a tool. 
 
+You can download the code at https://github.com/amarnaths0005/Translitera
+
 You can try this online at https://amarnaths0005.github.io/Translitera/
 
 The following picture shows a screenshot.
