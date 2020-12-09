@@ -774,7 +774,7 @@
 
   function showKannadaText1() {
     let passage =
-      "  shree puraMdaradaasara jagadOddhaarana \n \n jagadOddhArana ADisidaLeshOde || \n \n jagadOddhArana maganeMdu tiLiyuta | \n suguNAMta raMganA AdisidaLeshOde || \n \n nigamakE silukada agaNita mahimana | \n magugaLa mANikyana ADisidaLeshOde || \n \n aNOraNIyana mahatO mahImana | \n apramEyanana ADisidaLeshOde || \n \n parama puruShana paravAsudEvana |\n puraMdara viThalana ADisidaLeshOde ||";
+      "  shree puraMdaradaasara jagadOddhaarana \n \n jagadOddhArana ADisidaLeshOde || \n \n jagadOddhArana maganeMdu tiLiyuta | \n suguNAMta raMganA ADisidaLeshOde || \n \n nigamakE silukada agaNita mahimana | \n magugaLa mANikyana ADisidaLeshOde || \n \n aNOraNIyana mahatO mahImana | \n apramEyanana ADisidaLeshOde || \n \n parama puruShana paravAsudEvana |\n puraMdara viThalana ADisidaLeshOde ||";
 
     optionLang.value = "kannada";
     language = "Kannada";
